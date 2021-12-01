@@ -83,6 +83,14 @@ def p9():
     print(x.imag)
 
 
+def p10():
+    print(0.1+0.2)
+    print(decimal.Decimal('0.1')+decimal.Decimal('0.2'))
+    print(0.00005)
+    x = 1+2j
+    print(x.real)
+    print(x.imag)
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     #print_hi('PyCharm')
@@ -91,6 +99,7 @@ if __name__ == '__main__':
     #p6()
     #p7()
     #p8()
-    p9()
+    #p9()
+    p10()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
