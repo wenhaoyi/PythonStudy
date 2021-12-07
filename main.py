@@ -4,6 +4,8 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import random
 import decimal
+
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -65,41 +67,81 @@ def p7():
                 print("too small")
             else:
                 print("too big")
-            count= count -1
+            count = count - 1
     print("game over")
 
 
 def p8():
-    print(random.randint(1,100))
+    print(random.randint(1, 100))
     print(random.getstate())
 
 
 def p9():
-    print(0.1+0.2)
-    print(decimal.Decimal('0.1')+decimal.Decimal('0.2'))
+    print(0.1 + 0.2)
+    print(decimal.Decimal('0.1') + decimal.Decimal('0.2'))
     print(0.00005)
-    x = 1+2j
+    x = 1 + 2j
     print(x.real)
     print(x.imag)
 
 
 def p10():
-    print(0.1+0.2)
-    print(decimal.Decimal('0.1')+decimal.Decimal('0.2'))
-    print(0.00005)
-    x = 1+2j
-    print(x.real)
-    print(x.imag)
+    output = 3 / 2
+    output = 3 // 2
+    output = -3 // 2
+    output = 3 % 2
+    output = divmod(3, 2)
+    output = divmod(-3, 2)
+    output = abs(-520)
+    output = abs(1 + 2j)
+    output = abs(1 + 2j) * abs(1 + 2j)
+    output = int("520")
+    output = int(3.14)
+    output = int(9.99)
+    output = float("3.14")
+    output = float(520)
+    output = float(22.33)
+    output = float(2E6)
+    output = complex("1+2j")  # no space between
+    output = pow(2, 3)
+    output = 2 ** 4
+    output = pow(2, 3, 5)
+    output = 2 ** 3 % 5
+    print(output)
+
+
+def p11():
+    output = bool(250)
+    output = bool("250")
+    output = bool("")
+    output = bool(False)
+    output = bool(0)
+    print(output)
+
+
+def p12():
+    output = 3 and 4
+    output = 0 and 4
+    output = 3 or 4
+    output = 0 or 4
+    output = not 1 and 0 or 1
+    print(output)
+
+
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    #print_hi('PyCharm')
-    #p4()
-    #p5()
-    #p6()
-    #p7()
-    #p8()
-    #p9()
-    p10()
+    # print_hi('PyCharm')
+    # p4()
+    # p5()
+    # p6()
+    # p7()
+    # p8()
+    # p9()
+    # p10()
+    # p11()
+    p12()
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
