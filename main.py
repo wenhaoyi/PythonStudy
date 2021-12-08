@@ -198,19 +198,91 @@ def p18():
 def p19():
     for each in "ABCDE":
         print(each)
-    i =0
-    while i <len("ABCDE"):
+    i = 0
+    while i < len("ABCDE"):
         print("ABCDE"[i])
         i += 1
     for i in range(11):
         print(i)
 
-    for i in range(5,10):
+    for i in range(5, 10):
         print(i)
+
+
+def p20():
+    rhyme = [1, 2, 3, 4, 5, "whatever"]
+    print(rhyme)
+    for each in rhyme:
+        print(each)
+    i = 0
+    while i < len(rhyme):
+        print(rhyme[i])
+        i += 1
+    print(rhyme[-1])
+    print(rhyme[1:3])
+    print(rhyme[:4])
+    print(rhyme[4:])
+    print(rhyme[:])
+    print(rhyme[0:6:2])
+    print(rhyme[::-2])
+    print(rhyme[::-1])
+
+
+def p21():
+    heros = ["钢铁侠", "绿巨人"]
+    heros.append("黑寡妇")
+    print(heros)
+    heros.extend(["鹰眼", "灭霸", "雷神"])
+    print(heros)
+    s = [1, 2, 3, 4, 5]
+    s[len(s):] = [6]
+    print(s)
+    s = [1, 3, 4, 5]
+    s.insert(1, 2)
+    print(s)
+    heros.remove("灭霸")
+    print(heros)
+    heros.pop(2)
+    print(heros)
+    heros.clear()
+    print(heros)
+
+
+def p22():
+    heros = ["蜘蛛侠", "绿巨人", "黑寡妇", "鹰眼", "灭霸", "雷神"]
+    print(heros)
+    heros[4] = "钢铁侠"
+    print(heros)
+    heros[3:] = ["aaa","bbb"]
+    print(heros)
+    nums = [3,1,9,6,8,3,5,3]
+    nums.sort()
+    print(nums)
+    nums.reverse()
+    print(nums)
+    heros.reverse()
+    print(heros)
+    nums = [3, 1, 9, 6, 8, 3, 5, 3]
+    nums.sort(reverse=True)
+    print(nums)
+    print(nums.count(3))
+    heros = ["蜘蛛侠", "绿巨人", "黑寡妇", "鹰眼", "灭霸", "雷神"]
+    print(heros.index("绿巨人"))
+    heros[heros.index("绿巨人")] = "神奇女侠"
+    print(heros)
+    nums = [3, 1, 9, 6, 8, 3, 5, 3]
+    print(nums.index(3,1,7))#find 3 from index 1 to index 7
+    nums_copy = nums.copy()
+    print(nums_copy)
+    nums_copy2 = nums[:]
+    print(nums_copy2)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    p22()
+    # p21()
+    # p20()
     # print_hi('PyCharm')
     # p4()
     # p5()
@@ -224,6 +296,6 @@ if __name__ == '__main__':
     # p16()
     # p17()
     # p18()
-    p19()
+    # p19()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
