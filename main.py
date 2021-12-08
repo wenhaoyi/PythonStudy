@@ -128,6 +128,85 @@ def p12():
     print(output)
 
 
+def p16():
+    age = 5
+    print("less than 18") if age < 18 else print("equal or over 18")
+    a = 3
+    b = 5
+    if a < b:
+        small = a
+    else:
+        small = b
+    print(small)
+
+    small = a if a < b else b
+    print(small)
+
+    score = 100
+    if 0 <= score < 60:
+        level = "D"
+    elif 60 <= score < 80:
+        level = "C"
+    elif 80 <= score < 90:
+        level = "B"
+    elif 90 <= score < 100:
+        level = "A"
+    elif score == 100:
+        level = "S"
+    print(level)
+
+    level = ('D' if 0 <= score < 60 else
+             'C' if 60 <= score < 80 else
+             'B' if 80 <= score < 90 else
+             'A' if 90 <= score < 100 else
+             'S')
+    print(level)
+
+
+def p17():
+    # love = "yes"
+    # while love == "yes":
+    #     love = input("Do you love me today？")
+    i = 1
+    sum = 0
+    while i <= 1000000:
+        sum += i
+        i += 1
+    print(sum)
+
+
+def p18():
+    i = 1
+    while i < 5:
+        print("循环内，i的值是", i)
+        if i == 3:
+            break
+        i += 1
+    else:
+        print("run else code")
+
+    i = 1
+    while i <= 9:
+        j = 1
+        while j <= i:
+            print(j, "*", i, "=", j * i, end=" ")
+            j += 1
+        print()
+        i += 1
+
+
+def p19():
+    for each in "ABCDE":
+        print(each)
+    i =0
+    while i <len("ABCDE"):
+        print("ABCDE"[i])
+        i += 1
+    for i in range(11):
+        print(i)
+
+    for i in range(5,10):
+        print(i)
 
 
 # Press the green button in the gutter to run the script.
@@ -141,7 +220,10 @@ if __name__ == '__main__':
     # p9()
     # p10()
     # p11()
-    p12()
-
+    # p12()
+    # p16()
+    # p17()
+    # p18()
+    p19()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
