@@ -198,19 +198,64 @@ def p18():
 def p19():
     for each in "ABCDE":
         print(each)
-    i =0
-    while i <len("ABCDE"):
+    i = 0
+    while i < len("ABCDE"):
         print("ABCDE"[i])
         i += 1
     for i in range(11):
         print(i)
 
-    for i in range(5,10):
+    for i in range(5, 10):
         print(i)
+
+
+def p23():
+    s = [1, 2, 3]
+    t = [4, 5, 6]
+    print(s + t)
+    print(s * 3)
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    print(matrix)
+    for i in matrix:
+        for each in i:
+            print(each)
+    for i in matrix:
+        print(i)
+    for i in matrix:
+        for each in i:
+            print(each, end=" ")
+        print()
+    print(matrix[2][2])
+    A = [0] * 3
+    print(A)
+    for i in range(3):
+        A[i] = [0] * 3
+    print(A)
+    B = [[0] * 3] * 3
+    print(B)
+    A[1][1] = 3
+    B[1][1] = 3
+    print(A)
+    print(B)
+    x = "ABC"
+    y = "ABC"
+    print(x is y)
+    x = [1, 2, 3]
+    y = [1, 2, 3]
+    print(x is y)
+
+
+def p24():
+    s = [1, 2, 3]
+    t = [4, 5, 6]
+    print(s + t)
+    print(s * 3)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    p24()
+    # p23()
     # print_hi('PyCharm')
     # p4()
     # p5()
@@ -224,6 +269,6 @@ if __name__ == '__main__':
     # p16()
     # p17()
     # p18()
-    p19()
+    # p19()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
