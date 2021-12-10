@@ -253,9 +253,9 @@ def p22():
     print(heros)
     heros[4] = "钢铁侠"
     print(heros)
-    heros[3:] = ["aaa","bbb"]
+    heros[3:] = ["aaa", "bbb"]
     print(heros)
-    nums = [3,1,9,6,8,3,5,3]
+    nums = [3, 1, 9, 6, 8, 3, 5, 3]
     nums.sort()
     print(nums)
     nums.reverse()
@@ -271,7 +271,7 @@ def p22():
     heros[heros.index("绿巨人")] = "神奇女侠"
     print(heros)
     nums = [3, 1, 9, 6, 8, 3, 5, 3]
-    print(nums.index(3,1,7))#find 3 from index 1 to index 7
+    print(nums.index(3, 1, 7))  # find 3 from index 1 to index 7
     nums_copy = nums.copy()
     print(nums_copy)
     nums_copy2 = nums[:]
@@ -446,15 +446,107 @@ def p28():
     print(x.center(40, "a"))
 
 
+def p29():
+    x = "ABCDEFGABC"
+    print(x.count("B"))
+    print(x.find("B"))
+    print(x.rfind("B"))
+    print(x.find("H"))
+    # print(x.index("H"))
+    code = """
+            whatever lines
+    dfsg"""
+    new_code = code.expandtabs(4)
+    print(new_code)
+    x = "ABCDEF"
+    print(x.replace("AB", "PPP"))
+    table = str.maketrans("ABCDE", "12345")
+    print("AB00000000".translate(table))
 
+
+def p30():
+    x = "I love python"
+    print(x.startswith("I"))
+    print(x.endswith("python"))
+    print(x.endswith("py"))
+    print(x.startswith("I", 1))
+    print(x.startswith(" ", 1))
+    print(x.endswith("py", 0, 9))
+    if x.startswith(("A", "B", "I")):
+        print("includes")
+    x = "I love python"
+    print(x.istitle())
+    print(x.isupper())
+    print(x.upper().isupper())
+    print(x.isalpha())
+    x = "abcd"
+    print(x.isalpha())
+    x = "i love python \n"
+    print(x.isprintable())
+    x = "123456"
+    print(x.isdecimal())
+    print(x.isdigit())
+    print(x.isnumeric())
+    x = "一二三"
+    print(x.isdecimal())
+    print(x.isdigit())
+    print(x.isnumeric())
+    # isalnum is like isalpha or isdecimal or isdigital or isnumeric
+    x = "i love python"
+    print(x.isidentifier())
+    x = "i_love_python"
+    print(x.isidentifier())
+    x = "123i_love_python"
+    print(x.isidentifier())
+
+
+def p31():
+    x = "    no space on left    "
+    print(x.lstrip())
+    x = "    no space on right    "
+    print(x.rstrip())
+    x = "    no space on both sides    "
+    print(x.strip())
+
+    x = "www.ilovefishc.com"
+    print(x.lstrip("wcom."))  # delete until the first not the deleted one
+    x = "www.ilovefishc.com"
+    print(x.rstrip("wcom."))
+    x = "www.ilovefishc.com"
+    print(x.strip("wcom."))
+    # x = "www.ilovefishc.com"
+    # print(x.removeprefix("w"))
+    # x = "www.ilovefishc.com"
+    # print(x.removesuffix("wcom."))
+    x = "www.ilovefishc.com"
+    print(x.partition("."))
+    x = "www.ilovefishc.com"
+    print(x.rpartition("."))
+    x = "ABC,DEF,GHI"
+    print(x.split())
+    x = "ABC,DEF,GHI"
+    print(x.split(','))
+    x = "ABC,DEF,GHI"
+    print(x.split(',', 1))
+    x = "ABC,DEF,GHI"
+    print(x.rsplit(',', 1))
+    x = "ABC\nDEF\nGHI"
+    print(x.split('\n'))
+    x = "ABC\nDEF\nGHI"
+    print(x.splitlines())
+    x = "."
+    print(x.join(["a","b","c"]))
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    p22()
+    p31()
+    # p30()
+    # p29()
+    # p22()
     # p21()
     # p20()
-    p28()
+    # p28()
     # p27()
     # p26()
     # p25()
