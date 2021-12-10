@@ -246,15 +246,147 @@ def p23():
 
 
 def p24():
-    s = [1, 2, 3]
-    t = [4, 5, 6]
-    print(s + t)
-    print(s * 3)
+    x = [1, 2, 3]
+    y = x
+    x[1] = 1
+    print(x)
+    print(y)
+    x = [1, 2, 3]
+    y = x.copy()
+    x[1] = 1
+    print(x)
+    print(y)
+    x = [1, 2, 3]
+    y = x[:]
+    print(x)
+    print(y)
+    x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    y = x.copy()
+    print(y)
+    x[1][1] = 0
+    print(x)
+    print(y)
+    import copy
+    x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    y = copy.copy(x)
+    x[1][1] = 222
+    print(x)
+    print(y)
+    x = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    y = copy.deepcopy(x)
+    x[1][1] = 333
+    print(x)
+    print(y)
+
+
+def p25():
+    oho = [1, 2, 3, 4, 5]
+    for i in range(len(oho)):
+        oho[i] = oho[i] * 2
+    print(oho)
+    oho = [i * 2 for i in oho]
+    print(oho)
+    x = [i for i in range(10)]
+    print(x)
+    x = [i + 1 for i in range(10)]
+    print(x)
+    x = []
+    for i in range(10):
+        x.append(i + 2)
+    print(x)
+    y = [c * 2 for c in "whatever"]
+    print(y)
+    code = [ord(c) for c in "FishC"]
+    print(code)
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    col2 = [row[1] for row in matrix]
+    print(col2)
+    diag = [matrix[i][i] for i in range(len(matrix))]
+    print(diag)
+    diag2 = [matrix[i][len(matrix) - i - 1] for i in range(len(matrix))]
+    print(diag2)
+
+
+def p26():
+    S = [[0] * 3 for i in range(3)]
+    print(S)
+    S[1][1] = 1
+    print(S)
+    even = [i for i in range(10) if i % 2 == 0]
+    print(even)
+    even = [i + 1 for i in range(10) if i % 2 == 0]
+    print(even)
+    words = ["Great", "FishC", "Brilliant", "Excellent", "Fantastic"]
+    fwords = [i for i in words if i[0] == "F"]
+    print(fwords)
+    matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    flatten = [col for row in matrix for col in row]
+    print(flatten)
+    temp = [[x, y] for x in range(10) if x % 2 == 0 for y in range(10) if y % 3 == 0]
+    print(temp)
+
+
+def p27():
+    rhyme = (1, 2, 3, 4, "whatever")
+    print(rhyme)
+    rhyme = 1, 2, 3, 4, "abc"
+    print(rhyme)
+    rhyme2 = rhyme[:]
+    print(rhyme2)
+    rhyme2 = rhyme[::-1]
+    print(rhyme2)
+    nums = (1, 2, 3, 4, 5, 1, 2, 3, 1)
+    print(nums.count(2))
+    print(nums.index(5))
+    s = (1, 2, 3)
+    t = (4, 5, 6)
+    w = s + t
+    print(w)
+    for each in w:
+        print(each)
+    s = (1, 2, 3)
+    t = (4, 5, 6)
+    w = s, t
+    print(w)
+
+    t = (123, "whatever", 3.14)
+    print(t)
+    x, y, z = t
+    print(x)
+    print(y)
+    print(z)
+
+
+def p28():
+    x = "123456"
+    output = "是回文数" if x == x[::-1] else "不是回文数"
+    print(output)
+    x = "I love China"
+    print(x.capitalize())
+    print(x.casefold())
+    print(x.title())
+    print(x.swapcase())
+    print(x.upper())
+    print(x.lower())
+
+    x = "whatever,abcd,12,34,56,78,90"
+    print(x.center(50))
+    print(x.ljust(40))
+    print(x.rjust(40))
+    print(x.zfill(50))
+    print(x.center(40, "a"))
+
+
+
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    p24()
+    p28()
+    # p27()
+    # p26()
+    # p25()
+    # p24()
     # p23()
     # print_hi('PyCharm')
     # p4()
