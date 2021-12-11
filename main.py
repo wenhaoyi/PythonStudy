@@ -515,7 +515,7 @@ def p31():
     x = "www.ilovefishc.com"
     print(x.strip("wcom."))
     # x = "www.ilovefishc.com"
-    # print(x.removeprefix("w"))
+    # print(x.removeprefix())
     # x = "www.ilovefishc.com"
     # print(x.removesuffix("wcom."))
     x = "www.ilovefishc.com"
@@ -535,12 +535,178 @@ def p31():
     x = "ABC\nDEF\nGHI"
     print(x.splitlines())
     x = "."
-    print(x.join(["a","b","c"]))
+    print(x.join(["a", "b", "c"]))
+
+
+def p32():
+    year = 2021
+    x = "ABCD {} jkl".format(year)
+    print(x)
+    a = "111"
+    b = "222"
+    c = "333"
+    x = "a{}b{}c{}".format(a, b, c)
+    print(x)
+    a = "111"
+    b = "222"
+    c = "333"
+    x = "a{2}b{1}c{0}".format(a, b, c)
+    print(x)
+    a = "111"
+    b = "222"
+    c = "333"
+    x = "a{name1}b{name2}c{name3}".format(name1=a, name2=b, name3=c)
+    print(x)
+    x = "{:^10}"
+    print(x.format(250))
+    x = "{1:>10}{0:<10}"
+    print(x.format(520, 250))
+    x = "{left:>10}{right:<10}"
+    print(x.format(right=520, left=250))
+    x = "{:010}"
+    print(x.format(250))
+    x = "{1:$>10}{0:%<10}"
+    print(x.format(520, 250))
+
+
+def p33():
+    print("{:+} {:-}".format(520, -520))
+    print("{:,}".format(123456))
+    print("{:_}".format(1234))
+    print("{:.2f}".format(3.1415926))
+    print("{:.2g}".format(3.1415926))
+    print("{:.6}".format("I love python"))
+    print("{:b}".format(80))
+    print("{:c}".format(80))
+    print("{:d}".format(80))
+    print("{:o}".format(80))
+    print("{:x}".format(80))
+    print("{:#b}".format(80))
+    print("{:#d}".format(80))
+    print("{:#o}".format(80))
+    print("{:#x}".format(80))
+    print("{:e}".format(3.1415))
+    print("{:E}".format(3.1415))
+    print("{:f}".format(3.1415))
+    print("{:F}".format(3.1415))
+    print("{:G}".format(123456789))
+    print("{:G}".format(3.1415))
+    print("{:%}".format(3.1415))
+    print("{:.2%}".format(3.1415))
+    print("{:.{prec}%}".format(3.1415, prec=3))
+    a = "111"
+    b = "222"
+    c = "333"
+    x = f"a{a}b{b}c{c}"
+    print(x)
+    print(f"{3.1415:.2%}")
+    fill = "+"
+    align = "^"
+    width = 10
+    prec = 3
+    ty = "g"
+    print(f"{3.1415:{fill}{align}{width}.{prec}{ty}}")
+
+
+def p34():
+    s = [1, 2, 3]
+    print(id(s))
+    s *= 2
+    print(s)
+    print(id(s))
+    t = (1, 2, 3)
+    print(id(t))
+    t *= 2
+    print(t)
+    print(id(t))
+    x = "abc"
+    y = "abc"
+    print(x is y)
+    x = [1, 2, 3]
+    y = [1, 2, 3]
+    print(x is y)
+    print("a" in "abc")
+    print("d" in "abc")
+    print("a" not in "abc")
+    print("d" not in "abc")
+    x = [1, 2, 3, 4, 5]
+    del x[1:4]  # delete 2,3,4 idnex
+    print(x)
+
+
+def p35():
+    x = list("ABCDE")
+    print(x)
+    x = list((1, 2, 3, 4, 5))
+    print(x)
+    x = tuple("ABCDE")
+    print(x)
+    x = str([1, 2, 3, 4, 5])
+    print(x)
+    print(max("abcA", default="nothing"))
+    print(2 ** 3)
+    s = [1, 2, 3, 4, 5]
+    print(sum(s))
+    # print(sum(s, start=100))
+    s = [1, 2, 5, 6, 8, 3, 2, 5]
+    print(sorted(s))
+    print(s)
+    print(s.sort())  # ???
+    print(s)
+    t = ["sda", "bfdg", "jdfg", "d", "r", "efd"]
+    print(sorted(t))
+    # print(sorted(t, key=len()))
+    t = "abkdsfkbsjd"
+    print(sorted(t))
+    print(list(reversed(t)))
+
+
+def p36():
+    x = [1, 1, 0]
+    y = [1, 1, 9]
+    print(all(x))
+    print(all(y))
+    seasons = ["Spring", "Summer", "Fall", "Winter"]
+    print(list(enumerate(seasons)))
+    print(list(enumerate(seasons, 10)))
+    x = [1, 2, 3]
+    y = [4, 5, 6]
+    zipped = zip(x, y)
+    print(list(zipped))
+    z = [7, 8, 9]
+    zipped = zip(x, y, z)
+    print(list(zipped))
+    mapped = map(ord, "FishC")
+    print(list(mapped))
+    mapped = map(pow, [2, 3, 10], [5, 2, 3])
+    print(list(mapped))
+    print(list(filter(str.islower, "FishC")))
+    mapped = map(ord, "FishC")
+    for each in mapped:
+        print(each)
+    print(list(mapped))
+    x = [1, 2, 3, 4, 5]
+    y = iter(x)
+    print(type(x))
+    print(type(y))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
+    print(next(y, "nothing left"))
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    p31()
+    p36()
+    # p35()
+    # p34()
+    # p33()
+    # p32()
+    # p31()
     # p30()
     # p29()
     # p22()
