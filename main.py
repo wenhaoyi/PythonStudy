@@ -699,9 +699,97 @@ def p36():
     print(next(y, "nothing left"))
 
 
+def p38():
+    x = {"A", "B"}
+    print(type(x))
+    y = {"A": "value of A", "B": "value of B"}
+    print(type(y))
+    print(y["A"])
+    b = dict(A="value1", B="value2")
+    print(b["B"])
+    c = dict([("A", "valueA"), ("B", "valueB")])
+    print(b["B"])
+    d = dict.fromkeys("FishC", 250)
+    print(d)
+    d.pop("s")
+    print(d)
+    d.pop("whatever", "there is no this key")
+    del d["i"]
+    print(d)
+    d.clear
+    print(d)
+
+
+def p39():
+    d = dict.fromkeys("FishC", 250)
+    print(d)
+    d["s"] = 666
+    print(d)
+    d.update(F="111", i="222")
+    print(d)
+    print(d.get("c", "there is no c"))
+    d.setdefault("c", "code")  # if there is c, then update, is there is no c , then add the key and value
+    d = dict.fromkeys("FishC", 250)
+    keys = d.keys()
+    values = d.values()
+    items = d.items()
+    print(keys)
+    print(values)
+    print(items)
+    print(list(d))
+    d = dict.fromkeys("FishC", 250)
+    b = {v: k for k, v in d.items()}
+    print(b)
+
+
+def p40():
+    s = set("FishC")
+    print(s)#not in order, so index is not working but in , not in is ok
+    s = set([1,1,2,3,2,3])
+    print(s)
+    print(len(s))
+    # s.isdisjoint()
+    # s.issubset()
+    # s.issuperset()
+    # s.union()
+    # s.intersection()
+    # s.difference()
+    # s.symmetric_difference()
+
+
+def p41():
+    t = frozenset("FishC")
+    print(t)
+    s = set("Fish")
+    print(s)
+    s.update([1,1],"23")# it is like “1123” or [1,1,2,3]
+    print(s)
+    # t is not able to make this kind of changes
+    s.add("45")#45 is a package not 4 and 5
+    print(s)
+    print(hash(1))
+    print(hash(1.0))#not changeable item can be hash
+    print(hash("FishC"))
+
+
+def p42():
+    pass
+
+
+def p43(a,*,b,c):
+    #/ and * show differnt type of input parameters
+
+
+
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    p36()
+    p42()
+    # p41()
+    # p40()
+    # p39()
+    # p38()
+    # p36()
     # p35()
     # p34()
     # p33()
